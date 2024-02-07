@@ -1,0 +1,51 @@
+import pytest
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
+
+@pytest.fixture
+def driver():
+    url = 'https://runa-land.ru/'
+    driver = webdriver.Chrome()
+    driver.get(url)
+    driver.implicitly_wait(5)
+
+    yield driver
+    driver.quit()
+
+def test_case_full_application(driver):
+    type_of_rest = driver.find_element(By.XPATH, '//*[@id="form1"]/div[1]/div[2]/div/span[2]')
+    type_of_rest.click()
+    type_of_rest_focus = driver.find_element(By.XPATH, '//*[@id="form1"]/div[1]/div[2]/div/div/ul/li[2]')
+    type_of_rest_focus.click()
+
+    region = driver.find_element(By.XPATH, '//*[@id="form1"]/div[2]/div[2]/div/span[2]')
+    region.click()
+    region_focus = driver.find_element(By.XPATH, '//*[@id="form1"]/div[2]/div[2]/div/div/ul/li[2]')
+    region_focus.click()
+
+    start_price = driver.find_element(By.XPATH, '//*[@id="form1"]/div[3]/div[2]/label[1]/input')
+    start_price.send_keys('10000')
+
+    end_price = driver.find_element(By.XPATH, '//*[@id="form1"]/div[3]/div[2]/label[2]/input')
+    end_price.send_keys('50000')
+
+    start_date = driver.find_element(By.XPATH, '//*[@id="tcalico_0"]')
+    start_date.click()
+    date = driver.find_element(By.XPATH, '//*[@id="tcal"]/table[2]/tbody/tr[3]/td[3]')
+    date.click()
+
+    end_date = driver.find_element(By.XPATH, '//*[@id="tcalico_1"]')
+    end_date.click()
+    date = driver.find_element(By.XPATH, '//*[@id="tcal"]/table[2]/tbody/tr[4]/td[3]')
+    date.click()
+
+    customer_name = driver.find_element(By.XPATH, '//*[@id="form1"]/div[5]/div[2]/input')
+    customer_name.send_keys('Евгений')
+
+    customer_phone = driver.find_element(By.XPATH, '//*[@id="form1"]/div[6]/div[2]/input')
+    customer_phone.send_keys('9110000000')
+    time.sleep(3)

@@ -48,4 +48,7 @@ def test_case_full_application(driver):
 
     customer_phone = driver.find_element(By.XPATH, '//*[@id="form1"]/div[6]/div[2]/input')
     customer_phone.send_keys('9110000000')
+
+    customer_email = driver.find_element(By.XPATH, '//*[@id="form1"]/div[7]/div[2]/input')
+    customer_email.send_keys('TEST@TEST.com')   # Вводим свой Email
     time.sleep(5)

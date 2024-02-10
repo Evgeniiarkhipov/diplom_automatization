@@ -48,4 +48,4 @@ def test_case_full_application(driver):
 
     customer_phone = driver.find_element(By.XPATH, '//*[@id="form1"]/div[6]/div[2]/input')
     customer_phone.send_keys('9110000000')
-    time.sleep(3)
+    time.sleep(5)

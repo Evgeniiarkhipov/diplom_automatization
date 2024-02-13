@@ -17,20 +17,20 @@ def driver():
     driver.quit()
 
 def test_case_full_application(driver):
-    type_of_rest = driver.find_element(By.XPATH, '//*[@id="form1"]/div[1]/div[2]/div/span[2]')
-    type_of_rest.click()
-    type_of_rest_focus = driver.find_element(By.XPATH, '//*[@id="form1"]/div[1]/div[2]/div/div/ul/li[2]')
-    type_of_rest_focus.click()
+    css_locator = '#form1 > div.tpl-field.type-select.field-required.type.select-data1 > div.field-value > div > span.selected'
+    property_values = driver.find_element(By.CSS_SELECTOR, css_locator)
+    driver.execute_script("ele=arguments[0]; ele.innerHTML = 'Семейный';", property_values);
 
-    region = driver.find_element(By.XPATH, '//*[@id="form1"]/div[2]/div[2]/div/span[2]')
-    region.click()
-    region_focus = driver.find_element(By.XPATH, '//*[@id="form1"]/div[2]/div[2]/div/div/ul/li[2]')
-    region_focus.click()
+    css_locator = '#form1 > div.tpl-field.type-select.field-required.direction.select-data2 > div.field-value > div > span.selected'
+    property_values = driver.find_element(By.CSS_SELECTOR, css_locator)
+    driver.execute_script("ele=arguments[0]; ele.innerHTML = 'Петрозаводск';", property_values);
 
     start_price = driver.find_element(By.XPATH, '//*[@id="form1"]/div[3]/div[2]/label[1]/input')
+    start_price.click()
     start_price.send_keys('10000')
 
     end_price = driver.find_element(By.XPATH, '//*[@id="form1"]/div[3]/div[2]/label[2]/input')
+    end_price.click()
     end_price.send_keys('50000')
 
     start_date = driver.find_element(By.XPATH, '//*[@id="tcalico_0"]')
@@ -44,11 +44,34 @@ def test_case_full_application(driver):
     date.click()
 
     customer_name = driver.find_element(By.XPATH, '//*[@id="form1"]/div[5]/div[2]/input')
-    customer_name.send_keys('Евгений')
+    customer_name.send_keys('Тестовое_имя')
 
     customer_phone = driver.find_element(By.XPATH, '//*[@id="form1"]/div[6]/div[2]/input')
     customer_phone.send_keys('9110000000')
 
     customer_email = driver.find_element(By.XPATH, '//*[@id="form1"]/div[7]/div[2]/input')
-    customer_email.send_keys('TEST@TEST.com')   # Вводим свой Email
-    time.sleep(5)
+    customer_email.send_keys('TEST@TEST.com')  # Вводим свой Email
+
+    button = driver.find_element(By.XPATH, '//*[@id="form1"]/div[8]/button')
+    button.click()
+    driver.save_screenshot('send_application.jpg')
+    time.sleep(3)
+
+def test_case_feedback(driver):
+    button = driver.find_element(By.XPATH, '/html/body/div[2]/header/div/div[2]/div[3]/a')
+    button.click()
+
+    customer_name = driver.find_element(By.XPATH, '//*[@id="d[0]"]')
+    customer_name.send_keys('Тестовое_имя')
+
+    customer_phone_or_email = driver.find_element(By.XPATH, '//*[@id="d[1]"]')
+    customer_phone_or_email.send_keys('test@test.ru')
+
+    input_text = driver.find_element(By.XPATH, '//*[@id="d[2]"]')
+    input_text.send_keys('Тестовая строка')
+
+    send_button = driver.find_element(By.XPATH, '//*[@id="form2"]/button')
+    send_button.click()
+
+    driver.save_screenshot('feedback_positive.jpg')
+    time.sleep(3)

@@ -1,5 +1,5 @@
 import time
-from pages.test_data import *
+from pages.testing_data import *
 from pages.application_page import applicationPage
 from pages.feedback_page import feedbackPage, feedbackButton
 import pytest

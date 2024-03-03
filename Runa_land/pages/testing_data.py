@@ -1,8 +1,8 @@
-def test_data_application(data):
+def data_application(data):
     for k, v, in enumerate(data):
         data[k] = v['property_type'], v['direction'], v['start_price'], v['end_price'], v['customer_name'], v['customer_phone'], v['customer_email']
     return data
-def test_data_feedback(data):
+def data_feedback(data):
     for k, v in enumerate(data):
         data[k] = v['customer_name'], v['customer_phone_or_email'], v['input_text'], v['expected_url']
     return data

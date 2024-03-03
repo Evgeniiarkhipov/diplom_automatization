@@ -75,5 +75,17 @@ test_cases_feedback = [
         'customer_phone_or_email': 'invalidemail.com',
         'input_text': 'Тестовая строка_2',
         'expected_url': 'mail'
+    },
+    {
+        'customer_name': 'Тестовое_имя',
+        'customer_phone_or_email': 'invalidemail.com',
+        'input_text': 'Тестовая строка_2',
+        'expected_url': 'mail'
+    },
+    {
+        'customer_name': 'Тестовое_имя',
+        'customer_phone_or_email': 'invalidemail.com',
+        'input_text': '',
+        'expected_url': 'mail'
     }
 ]

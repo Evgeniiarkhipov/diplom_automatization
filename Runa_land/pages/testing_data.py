@@ -7,6 +7,7 @@ def data_feedback(data):
         data[k] = v['customer_name'], v['customer_phone_or_email'], v['input_text'], v['expected_url']
     return data
 
+# Тестовые данные для формы заполнения заявки на тур на главной странице
 test_cases_application = [
     {
      'property_type': 'Семейный',
@@ -63,6 +64,8 @@ test_cases_application = [
      'customer_email': 'test@test.ru'
     }
 ]
+
+# Тестовые данные для формы заполнения заявки на странице обратной связи
 test_cases_feedback = [
     {
         'customer_name': 'Тестовое_имя',

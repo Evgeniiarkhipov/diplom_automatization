@@ -1,5 +1,9 @@
 from selenium.webdriver.common.by import By
-# Локаторы для application_page
+
+'''
+Локаторы для полей ввода на главной странице (application_page)
+'''
+# Поля ввода заявки на тур
 rest = (By.XPATH, '//*[@id="form1"]/div[1]/div[2]/div/span[2]')
 rest_focus = (By.XPATH, '//*[@id="form1"]/div[1]/div[2]/div/div/ul/li[2]')
 
@@ -25,11 +29,17 @@ customer_name_input = (By.XPATH, '//*[@id="form1"]/div[5]/div[2]/input')
 customer_phone_input = (By.XPATH, '//*[@id="form1"]/div[6]/div[2]/input')
 customer_email_input = (By.XPATH, '//*[@id="form1"]/div[7]/div[2]/input')
 
+# Кнопка отправки заявки на тур
 application_button = (By.XPATH, '//*[@id="form1"]/div[8]/button')
 
-# Локаторы для feedback_page
+'''
+Локаторы на странице обратной связи (feedback_page)
+'''
+# Поля ввода
 feedback_button = (By.XPATH, '/html/body/div[2]/header/div/div[2]/div[3]/a')
 customer_name = (By.XPATH, '//*[@id="d[0]"]')
 customer_phone_or_email_input = (By.XPATH, '//*[@id="d[1]"]')
 input_text_input = (By.XPATH, '//*[@id="d[2]"]')
+
+# Кнопка отправки заявки обратной связи
 send_feedback_button = (By.XPATH, '//*[@id="form2"]/button')

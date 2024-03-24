@@ -1,7 +1,7 @@
 from .locators import *
 
+# Элементы заполнения и отправки заявки на тур на главной странице
 class applicationPage:
-    # Атрибуты
     def __init__(self, driver):
         self.rest = driver.find_element(*rest)
         self.rest_focus = driver.find_element(*rest_focus)
@@ -15,10 +15,8 @@ class applicationPage:
         self.end_price_input = driver.find_element(*end_price_input)
 
         self.start_date_input = driver.find_element(*start_date_input)
-        # self.date_s = driver.find_element(*date_s)
 
         self.end_date_input = driver.find_element(*end_date_input)
-        # self.date_e = driver.find_element(*date_e)
 
         self.customer_name_input = driver.find_element(*customer_name_input)
         self.customer_phone_input = driver.find_element(*customer_phone_input)
@@ -26,7 +24,6 @@ class applicationPage:
 
         self.button = driver.find_element(*application_button)
 
-    # Методы
     def application(self, driver, property_type = '', direction = '', start_price = '', end_price = '', customer_name = '', customer_phone = '', customer_email = ''):
         self.rest.click()
         self.rest_focus.click()

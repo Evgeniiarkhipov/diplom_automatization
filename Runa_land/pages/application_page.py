@@ -55,4 +55,4 @@ class applicationPage:
         self.customer_email_input.send_keys(customer_email)
 
         self.button.click()
-        logger.info('Конец заяполнения заявки на тур')
+        logger.info('Конец заполнения заявки на тур')

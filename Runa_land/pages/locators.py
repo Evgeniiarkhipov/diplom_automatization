@@ -33,6 +33,13 @@ customer_email_input = (By.XPATH, '//*[@id="form1"]/div[7]/div[2]/input')
 application_button = (By.XPATH, '//*[@id="form1"]/div[8]/button')
 
 '''
+Локаторы ошибочных полей ввода
+'''
+list_locators = ['selected error',
+                 'price-label error',
+                 'field-value error']
+
+'''
 Локаторы на странице обратной связи (feedback_page)
 '''
 # Поля ввода

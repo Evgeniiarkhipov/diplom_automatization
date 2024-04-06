@@ -22,10 +22,10 @@ def browser():
 def test_case_full_application(browser, property_type, direction, start_price, end_price, customer_name, customer_phone, customer_email):
     application_page = applicationPage(browser)
     application_page.application(browser, property_type, direction, start_price, end_price, customer_name, customer_phone, customer_email)
-    try:
-        for elem in list_locators:
+    for elem in list_locators:
+        try:
             error_field = driver.find_element(By.CLASS_NAME, elem)
-    except: error_field = False
+        except: error_field = False
     assert error_field == False
 # Тест формы заполнения заявки на странице обратной связи
 @pytest.mark.parametrize('customer_name, customer_phone_or_email, input_text, expected_url', data_feedback(test_cases_feedback))

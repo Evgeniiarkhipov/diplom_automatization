@@ -1,8 +1,10 @@
 # Подключение логирования
 import logging
-logger = logging.getLogger(__name__)
-handler = logging.FileHandler(f'logs/runa_land.log', mode='w', encoding='utf-8')
-formatter = logging.Formatter(f'{__name__} %(asctime)s %(levelname)s %(message)s')
+import datetime
+date = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+logger = logging.getLogger()
+handler = logging.FileHandler(f'logs/runa_land{date}.log', mode='w', encoding='utf-8')
+formatter = logging.Formatter(f'%(module)s %(asctime)s %(levelname)s %(message)s')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
@@ -26,7 +28,7 @@ test_cases_application = [
      'start_price': '10000',
      'end_price': '50000',
      'customer_name': 'Тестовое_имя',
-     'customer_phone': '9110000000',
+     'customer_phone': '',
      'customer_email': 'test@test.ru'
     },
     {

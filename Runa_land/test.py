@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-
+import time
 from pages.locators import list_locators
 from pages.testing_data import *
 from pages.application_page import applicationPage
@@ -7,8 +7,10 @@ from pages.feedback_page import feedbackPage, feedbackButton
 import pytest
 from config import *
 
+LOGGER = logging.getLogger(__name__)
 @pytest.fixture
 def browser():
+    LOGGER.info("Старт")
     driver = webdriver.Chrome()
     driver.get(base_url)
     driver.implicitly_wait(5)
@@ -24,8 +26,12 @@ def test_case_full_application(browser, property_type, direction, start_price, e
     application_page.application(browser, property_type, direction, start_price, end_price, customer_name, customer_phone, customer_email)
     for elem in list_locators:
         try:
+            time.sleep(1)
             error_field = driver.find_element(By.CLASS_NAME, elem)
+            print("есть")
         except: error_field = False
+        print("нет")
+    time.sleep(1)
     assert error_field == False
 # Тест формы заполнения заявки на странице обратной связи
 @pytest.mark.parametrize('customer_name, customer_phone_or_email, input_text, expected_url', data_feedback(test_cases_feedback))

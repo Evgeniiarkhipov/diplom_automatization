@@ -1,6 +1,7 @@
 from .locators import *
 from .testing_data import *
 
+LOGGER = logging.getLogger(__name__)
 # Элементы заполнения и отправки заявки на тур на главной странице
 class applicationPage:
     def __init__(self, driver):
@@ -24,10 +25,10 @@ class applicationPage:
         self.customer_email_input = driver.find_element(*customer_email_input)
 
         self.button = driver.find_element(*application_button)
-        logger.info('Найдены все элементы для заявки на тур')
+        LOGGER.info('Найдены все элементы для заявки на тур')
 
     def application(self, driver, property_type = '', direction = '', start_price = '', end_price = '', customer_name = '', customer_phone = '', customer_email = ''):
-        logger.info('Начало заполнения заявки на тур')
+        LOGGER.info('Начало заполнения заявки на тур')
         self.rest.click()
         self.rest_focus.click()
         driver.execute_script(f"ele=arguments[0]; ele.innerHTML = '{property_type}';", property_values_rest);
@@ -55,4 +56,4 @@ class applicationPage:
         self.customer_email_input.send_keys(customer_email)
 
         self.button.click()
-        logger.info('Конец заполнения заявки на тур')
+        LOGGER.info('Конец заполнения заявки на тур')

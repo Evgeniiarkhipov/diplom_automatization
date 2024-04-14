@@ -28,7 +28,7 @@ test_cases_application = [
      'start_price': '10000',
      'end_price': '50000',
      'customer_name': 'Тестовое_имя',
-     'customer_phone': '',
+     'customer_phone': '9110000000',
      'customer_email': 'test@test.ru'
     },
     {

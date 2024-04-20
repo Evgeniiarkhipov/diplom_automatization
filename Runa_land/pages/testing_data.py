@@ -22,6 +22,7 @@ def data_feedback(data):
 # Тестовые данные для формы заполнения заявки на тур на главной странице
 test_cases_application = [
 # Позитивный сценарий
+# Семейный отдых
     {
      'property_type': 'Семейный',
      'direction': 'Петрозаводск',
@@ -32,19 +33,391 @@ test_cases_application = [
      'customer_email': 'test@test.ru'
     },
     {
-     'property_type': 'Экскурсионный',
+     'property_type': 'Семейный',
      'direction': 'Кондопожский район',
-     'start_price': '20000',
-     'end_price': '60000',
+     'start_price': '10000',
+     'end_price': '50000',
      'customer_name': 'Тестовое_имя',
      'customer_phone': '9110000000',
      'customer_email': 'test@test.ru'
     },
     {
-     'property_type': 'Экстримальный',
+     'property_type': 'Семейный',
      'direction': 'Беломорский район',
-     'start_price': '4000',
-     'end_price': '5000',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Семейный',
+     'direction': 'Сортавальский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Семейный',
+     'direction': 'Кемьский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Семейный',
+     'direction': 'Калевальский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Семейный',
+     'direction': 'Лоухи',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Семейный',
+     'direction': 'Сегежский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Семейный',
+     'direction': 'Медвежьегорский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Семейный',
+     'direction': 'Суоярви',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Семейный',
+     'direction': 'Не имеет значения',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+# Экскурсионный отдых
+    {
+     'property_type': 'Экскурсионный',
+     'direction': 'Петрозаводск',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экскурсионный',
+     'direction': 'Кондопожский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экскурсионный',
+     'direction': 'Беломорский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экскурсионный',
+     'direction': 'Сортавальский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экскурсионный',
+     'direction': 'Кемьский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экскурсионный',
+     'direction': 'Калевальский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экскурсионный',
+     'direction': 'Лоухи',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экскурсионный',
+     'direction': 'Сегежский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экскурсионный',
+     'direction': 'Медвежьегорский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экскурсионный',
+     'direction': 'Суоярви',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экскурсионный',
+     'direction': 'Не имеет значения',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+# Экстремальный отдых
+    {
+     'property_type': 'Экстремальный',
+     'direction': 'Петрозаводск',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экстремальный',
+     'direction': 'Кондопожский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экстремальный',
+     'direction': 'Беломорский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экстремальный',
+     'direction': 'Сортавальский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экстремальный',
+     'direction': 'Кемьский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экстремальный',
+     'direction': 'Калевальский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экстремальный',
+     'direction': 'Лоухи',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экстремальный',
+     'direction': 'Сегежский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экстремальный',
+     'direction': 'Медвежьегорский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экстремальный',
+     'direction': 'Суоярви',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Экстремальный',
+     'direction': 'Не имеет значения',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+# Активный отдых
+    {
+     'property_type': 'Активный',
+     'direction': 'Петрозаводск',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Активный',
+     'direction': 'Кондопожский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Активный',
+     'direction': 'Беломорский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Активный',
+     'direction': 'Сортавальский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Активный',
+     'direction': 'Кемьский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Активный',
+     'direction': 'Калевальский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Активный',
+     'direction': 'Лоухи',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Активный',
+     'direction': 'Сегежский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Активный',
+     'direction': 'Медвежьегорский район',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Активный',
+     'direction': 'Суоярви',
+     'start_price': '10000',
+     'end_price': '50000',
+     'customer_name': 'Тестовое_имя',
+     'customer_phone': '9110000000',
+     'customer_email': 'test@test.ru'
+    },
+    {
+     'property_type': 'Активный',
+     'direction': 'Не имеет значения',
+     'start_price': '10000',
+     'end_price': '50000',
      'customer_name': 'Тестовое_имя',
      'customer_phone': '9110000000',
      'customer_email': 'test@test.ru'

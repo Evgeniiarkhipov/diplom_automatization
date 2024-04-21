@@ -35,9 +35,10 @@ application_button = (By.XPATH, '//*[@id="form1"]/div[8]/button')
 '''
 Локаторы ошибочных полей ввода
 '''
-list_locators = ['selected error',
-                 'price-label error',
-                 'field-value error']
+list_locators = ['#form1 > div.tpl-field.type-select.field-required.type.select-data1 > div.field-value > div > span.selected.error',
+                 '#form1 > div.tpl-field.type-select.field-required.direction.select-data2 > div.field-value > div > span.selected.error',
+                 '#form1 > div.tpl-field.type-text.field-required.name > div.field-value.error',
+                 '#form1 > div.tpl-field.type-text.field-required.phone > div.field-value.error']
 
 '''
 Локаторы на странице обратной связи (feedback_page)

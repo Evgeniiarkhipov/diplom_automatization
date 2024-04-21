@@ -26,13 +26,11 @@ def test_case_full_application(browser, property_type, direction, start_price, e
     application_page.application(browser, property_type, direction, start_price, end_price, customer_name, customer_phone, customer_email)
     for elem in list_locators:
         try:
-            time.sleep(1)
-            error_field = driver.find_element(By.CLASS_NAME, elem)
-            print("есть")
-        except: error_field = False
-        print("нет")
-    time.sleep(1)
-    assert error_field == False
+            error_field = browser.find_element(By.CSS_SELECTOR, elem)
+            break
+        except:
+            error_field = True
+    assert bool(error_field) == True
 # Тест формы заполнения заявки на странице обратной связи
 @pytest.mark.parametrize('customer_name, customer_phone_or_email, input_text, expected_url', data_feedback(test_cases_feedback))
 

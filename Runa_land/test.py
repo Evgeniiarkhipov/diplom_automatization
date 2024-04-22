@@ -1,5 +1,4 @@
 from selenium.webdriver.common.by import By
-import time
 from pages.locators import list_locators
 from pages.testing_data import *
 from pages.application_page import applicationPage

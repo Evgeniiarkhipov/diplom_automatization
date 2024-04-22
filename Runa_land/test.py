@@ -27,10 +27,12 @@ def test_case_full_application(browser, property_type, direction, start_price, e
     for elem in list_locators:
         try:
             error_field = browser.find_element(By.CSS_SELECTOR, elem)
+            assert bool(error_field) == True
             break
         except:
-            error_field = True
-    assert bool(error_field) == True
+            error_field = False
+            assert error_field == False
+
 # Тест формы заполнения заявки на странице обратной связи
 @pytest.mark.parametrize('customer_name, customer_phone_or_email, input_text, expected_url', data_feedback(test_cases_feedback))
 
